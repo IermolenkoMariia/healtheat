@@ -10,6 +10,7 @@
             color: #fff;
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/bg1.jpg);
             display: block;
+            min-width: 550px;
             width: 100vw;
             height: 100vh;
             min-height: calc(var(--vh, 1vh) * 100);
@@ -31,17 +32,39 @@
             font-size: 5rem;
         }
         h3 {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
+            margin-top: -1em;
+            margin-bottom: 1.5em;
+            font-weight: 400;
         }
         #app-links {
-            margin-top: 20px;
             text-align: center;
         }
         #app-links p {
-            margin-bottom: 0;
+            font-size: 2em;
+            margin: 0;
         }
         #app-links img {
-            height: 50px;
+            height: 70px;
+            padding: 10px 20px;
+        }
+
+        /* Trick only for mobile phone portrait */
+        @media only screen and (max-aspect-ratio: 2/3) and (min-width: 640px) and (orientation: portrait) {
+            h1 {
+                font-size: 8em;
+            }
+            h3 {
+                font-size: 2.5em;
+            }
+            #app-links p {
+                font-size: 3.5em;
+                margin-bottom: 30px;
+                margin-top: 100px;
+            }
+            #app-links img {
+                height: 100px;
+            }
         }
     </style>
 </head>
@@ -50,7 +73,7 @@
         <h1>Health'eat</h1>
         <h3>think what you eat</h3>
         <div id="app-links">
-            <p>soon available on</p>
+            <p>available soon on</p>
             <!-- <a href=""> -->
                 <img id="app-store-badge" src="images/app-store-badge.svg">
             <!-- </a> -->
